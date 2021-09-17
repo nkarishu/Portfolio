@@ -1,0 +1,9 @@
+.header {
+    height: 90vh;
+    position: fixed;
+    z-index: 2;
+    top: 5%;
+    left: 5%;
+    @include flex;
+    flex-direction: column;
+}

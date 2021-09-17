@@ -1,0 +1,125 @@
+.wrapper {
+    transition: .4s;
+}
+
+.mv {
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 350px;
+
+    &__pic {
+        width: 65%;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+    }
+
+    &__img {
+        @include img;
+    }
+
+    &__wrap {
+        position: absolute;
+        top: 10%;
+        left: 15%;
+    }
+
+    &__ttl {
+        font-family: $font-ttl;
+        font-weight: 400;
+        font-size: 8.5vw;
+        line-height: 11rem;
+        margin-bottom: 20px;
+    }
+
+    &__txt {
+        font-size: 28px;
+    }
+
+}
+
+.main {
+    width: 80%;
+    margin: 0 5% 350px 15%;
+    line-height: 1.3rem;
+    font-family: $font-txt;
+}
+
+.about {
+
+    &__ttl {
+        @include ttl;
+    }
+
+    &__wrap {
+        @include flex;
+        margin-bottom: 100px;
+    }
+
+    &__txtbox {
+        width: 49%;
+    }
+
+    &__txt {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__pic {
+        width: 49%;
+        height: 30vh;
+    }
+
+    &__img {
+        @include img;
+        object-position: 20% center;
+    }
+}
+
+.skill {
+    margin-bottom: 350px;
+
+    &__wrap {
+        @include flex;
+        flex-wrap: wrap;
+    }
+
+    &__unit {
+        width: 30%;
+        height: 8vh;
+        margin-bottom: 4rem;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "area1 area2"
+            "area1 area3";
+    }
+
+    &__icon {
+        align-self: center;
+        grid-area: area1;
+    }
+
+    &__sub {
+        font-size: 20px;
+        margin-bottom: 10px;
+        grid-area: area2;
+    }
+
+    &__txt {
+        grid-area: area3;
+    }
+}
+
+.projects {
+    margin-bottom: 350px;
+
+    &__ttl {
+        @include ttl;
+    }
+}

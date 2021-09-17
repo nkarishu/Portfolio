@@ -1,0 +1,23 @@
+@mixin width {
+    width: 80%;
+    margin: 0 auto;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin ttl {
+    font-family: $font-ttl;
+    font-size: 2.5vw;
+    margin-bottom: 75px;
+    letter-spacing: 0.1rem;
+}
+
+@mixin img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
