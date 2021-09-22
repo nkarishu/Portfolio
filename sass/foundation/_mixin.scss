@@ -21,3 +21,53 @@
     height: 100%;
     object-fit: cover;
 }
+
+@mixin p-link {
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+
+    &:hover .projects__txtbox {
+        opacity: 1;
+    }
+
+    &:hover .projects__pic1 {
+        opacity: 1;
+    }
+
+    &:hover .projects__pic2 {
+        opacity: 1;
+    }
+
+    &:hover .projects__pic3 {
+        opacity: 1;
+    }
+
+    &:hover .projects__pic4 {
+        opacity: 1;
+    }
+
+    &:hover .projects__pic5 {
+        opacity: 1;
+    }
+
+    &:hover .projects__pic6 {
+        opacity: 1;
+    }
+
+    &:hover .projects__pic7 {
+        opacity: 1;
+    }
+}
+
+@mixin p-pic {
+    width: 130%;
+    height: 80%;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    transform: rotate(-18deg);
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    transition: .4s;
+}

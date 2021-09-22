@@ -6,22 +6,21 @@
     height: 100vh;
     width: 100%;
     margin-bottom: 350px;
-
+    position: relative;
+    
     &__pic {
         width: 65%;
         height: 80%;
-        position: absolute;
+        background: url(../images/mv.jpg) center center / cover;
+        position: fixed;
         top: 10%;
         left: 30%;
-    }
-
-    &__img {
-        @include img;
+        position: absolute;
     }
 
     &__wrap {
         position: absolute;
-        top: 10%;
+        top: 15%;
         left: 15%;
     }
 
@@ -29,7 +28,7 @@
         font-family: $font-ttl;
         font-weight: 400;
         font-size: 8.5vw;
-        line-height: 11rem;
+        line-height: 13rem;
         margin-bottom: 20px;
     }
 
@@ -117,9 +116,151 @@
 }
 
 .projects {
-    margin-bottom: 350px;
+    // margin-bottom: 100px;
 
     &__ttl {
         @include ttl;
+        margin-bottom: 0;
+    }
+
+    &__wrap {
+        width: 90%;
+        @include flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    &__link {
+
+        &1 {
+            @include p-link;
+            background: #D8CF68;
+            width: 40%;
+            height: 75vh;
+            margin: 0 50px 0 0;
+        }
+
+        &2 {
+            @include p-link;
+            background: #DB7C7C;
+            width: 35%;
+            height: 60vh;
+            margin: 40vh 50px 50px 0;
+        }
+
+        &3 {
+            @include p-link;
+            background: #7C8BDB;
+            width: 40%;
+            height: 40vh;
+            margin: -45vh 50px 0 0;
+        }
+
+        &4 {
+            @include p-link;
+            background: #B67CDB;
+            width: 35%;
+            height: 60vh;
+            margin: 0 50px 50px 0;
+        }
+
+        &5 {
+            @include p-link;
+            background: #DBAF7C;
+            width: 40%;
+            height: 75vh;
+            margin: -50vh 50px 0 0;
+        }
+
+        &6 {
+            @include p-link;
+            background: #7CC9DB;
+            width: 35%;
+            height: 60vh;
+            margin: 0 50px 50px 0;
+        }
+
+        &7 {
+            @include p-link;
+            background: #94B474;
+            width: 40%;
+            height: 40vh;
+            margin: -15vh 50px 0 0;
+        }
+
+        &8 {
+            @include p-link;
+            background: #94B474;
+            width: 35%;
+            height: 0vh;
+            margin: 0 50px 0 0;
+            opacity: 0;
+        }
+    }
+
+    &__pic {
+
+        &1 {
+            @include p-pic;
+            background: url(../images/projects1.jpg) center center / cover;
+        }
+
+        &2 {
+            @include p-pic;
+            background: url(../images/projects2.jpg) center center / cover;
+        }
+
+        &3 {
+            @include p-pic;
+            background: url(../images/projects3.jpg) center center / cover;
+            width: 120%;
+            height: 100%;
+        }
+        
+        &4 {
+            @include p-pic;
+            background: url(../images/projects4.jpg) center center / cover;
+        }
+        
+        &5 {
+            @include p-pic;
+            background: url(../images/projects5.jpg) center center / cover;
+        }
+        
+        &6 {
+            @include p-pic;
+            background: url(../images/projects6.jpg) center center / cover;
+        }
+        
+        &7 {
+            @include p-pic;
+            background: url(../images/projects7.jpg) top center / cover;
+            width: 120%;
+            height: 100%;
+        }
+
+        &8 {
+            @include p-pic;
+        }
+    }
+
+    &__txtbox {
+        position: absolute;
+        top: 17%;
+        left: 5%;
+        opacity: 0.8;
+        transition: .4s;
+    }
+
+    &__sub {
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    &__txt {
+        color: #fff;
     }
 }
