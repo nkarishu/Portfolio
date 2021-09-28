@@ -1,9 +1,32 @@
 .header {
-    height: 90vh;
     position: fixed;
     z-index: 2;
     top: 5%;
     left: 5%;
     @include flex;
-    flex-direction: column;
+    width: 90%;
+}
+
+.btn {
+    @include flex;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    z-index: 3;
+
+    &__top {
+        @include btn(-16px);
+    }
+
+    &__middle {
+        @include btn;
+    }
+
+    &__bottom {
+        @include btn(16px);
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
 }

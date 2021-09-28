@@ -1,1 +1,21 @@
+.new-wrapper {
+    background: #000;
+    width: 100%;
+}
 
+.rotate-top {
+    transform: rotate(45deg);
+}
+  
+.hide-middle {
+    opacity: 0;
+}
+  
+.rotate-bottom {
+    transform: rotate(-45deg);
+}
+
+.gnav-active {
+    pointer-events: auto;
+    transform: translateY(0);
+}
