@@ -6,9 +6,9 @@
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.9);
-    transform: translateY(-100%);
+    transform: translateX(100%);
     transition: 1s;
-    
+
     &__nav {
         @include flex;
         justify-content: center;
@@ -27,19 +27,31 @@
         text-decoration: none;
         color: #fff;
     }
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+
 }
 
 .pcgnav {
     display: none;
 
+    &__lang {
+        display: none;
+    }
+
     @media screen and (min-width: 1024px) {
+        display: block;
         color: $grey;
+        opacity: .5;
+        @include flex;
+        flex-direction: column;
 
         &__nav {
-            height: 25vh;
             @include flex;
             flex-direction: column;
-            font-size: 0.9rem;
+            height: 40vh;
         }
 
         &__lang {
@@ -60,6 +72,7 @@
             margin: 0 5px;
             color: $grey;
         }
+
     }
 }
 
