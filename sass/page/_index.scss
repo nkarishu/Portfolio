@@ -141,7 +141,7 @@ body {
 }
 
 .skill {
-    margin: 0 0 200px 15px;
+    margin: 0 0 300px 15px;
 
     @media screen and (min-width: 1024px) {
         @include flex;
@@ -323,5 +323,71 @@ body {
         @media screen and (min-width:768px) {
             font-size: 1rem;
         }
+    }
+}
+
+
+.projectsyes {
+    margin-bottom: 70vh;
+
+    &__ttl {
+        position: sticky;
+        z-index: -1;
+        top: 15vh;
+        @include ttl;
+        height: 2vh;
+
+        &::after {
+            content: "";
+            background: rgb(101, 101, 250);
+            position: relative;
+            top: -10vh;
+            height: 35vh;
+            width: 90%;
+            display: block;
+            margin-left: 10%;
+            z-index: -2;
+        }
+    }
+
+
+    &__box {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    &__sub {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-right: 80px;
+        text-align: right;
+    }
+
+    &__txt {
+        font-size: .8rem;
+        margin-right: 80px;
+        text-align: right;
+    }
+
+    &__pic {
+        margin: 0 0 0 auto;
+        width: 70%;
+        height: 60vh;
+        margin-top: -40px;
+    }
+
+    &__img {
+        @include img;
+    }
+
+    &__href {
+        text-align: center;
+        margin-top: -40px;
+        margin-right: 250px;
+        font-size: 0.8rem;
+    }
+
+    &__link {
+        text-decoration: none;
     }
 }
