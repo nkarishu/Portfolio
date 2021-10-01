@@ -13,11 +13,30 @@ $(function () {
         $('#gnav__nav').removeClass('gnav__nav-active');
     });
 
-    //背景色を変える
+    //モーダル
+    $('#container').on('click', '.container__link', function(){
+        const modal = $(this).attr('data-modal');
+        console.log(modal);
+        
+        $(modal).fadeIn(function(){
+            $(this).on('click', function(){
+                $(this).fadeOut();
+            });
+
+            const link = $(this).find('a'); //子の中のa要素を探す
+            $(link).on('click', function(e){
+                e.stopPropagation(); //親元にクリックを伝えない
+                console.log(e);
+            });
+        });
+
+        return false;
+    });
+
+    //footer背景色を変える
     const viewHeight = $(window).height();
 
     $(window).on('scroll', function () {
-        //スクロール位置を常に取得
         const ST = $(window).scrollTop();
         const target = $('.footer').offset().top;
 
