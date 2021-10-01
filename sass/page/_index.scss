@@ -165,7 +165,7 @@ body {
             grid-template-areas:
                 "area1 area2"
                 "area1 area3";
-                width: 46%;
+            width: 46%;
         }
 
         @media screen and (min-width: 1024px) {
@@ -213,7 +213,7 @@ body {
         @include ttl;
         height: 2vh;
         margin-bottom: 10vh;
-        
+
         @media screen and (min-width:768px) {
             margin-bottom: 5vh;
             position: sticky;
@@ -230,7 +230,7 @@ body {
             display: block;
             margin-left: 10%;
             z-index: -2;
-            
+
             @media screen and (min-width:768px) {
                 height: 20vh;
             }
@@ -246,22 +246,36 @@ body {
         margin-bottom: 15vh;
     }
 
-    &__sub {
-        font-size: 1rem;
+    &__txtbox {
         text-align: right;
-        
-        @media screen and (min-width:768px) {
-            font-size: 1.5rem;
-            margin: 0 10% 1vh 0;
+        font-size: 0.8rem;
+        margin-right: 5%;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-right: 8%;
         }
     }
 
-    &__txt {
-        text-align: right;
-        font-size: .8rem;
+    &__sub {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1vh;
 
-        @media screen and (min-width:768px) {
-            margin-right: 10%;
+        @media screen and (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+            opacity: 0.8;
         }
     }
 
@@ -275,28 +289,11 @@ body {
             height: 45vh;
             margin: -6vh 0 0 auto;
         }
-        
+
         @media screen and (min-width:1024px) {
             width: 70%;
             height: 60vh;
-        }
-        
-        &pc  {
-            width: 100%;
-            height: 25vh;
-            margin-top: 1vh;
-            
-            @media screen and (min-width:768px) {
-                width: 70%;
-                height: 28vh;
-                margin: 1vh 0 0 auto;
-            }
-            
-            
-            @media screen and (min-width: 1024px) {
-                width: 45%;
-                height: 45vh;
-            }
+            margin: -4vh 0 0 auto;
         }
 
         &fly {
@@ -307,44 +304,12 @@ body {
             @media screen and (min-width:768px) {
                 width: 70%;
                 height: 35vh;
-                margin: 0 0 0 auto;
+                margin-right: 8%;
             }
         }
     }
 
     &__img {
         @include img;
-    }
-
-    &__href {
-        margin-top: -3.5vh;
-        font-size: 0.8rem;
-        color: #000;
-
-        @media screen and (min-width:768px) {
-            margin: -6vh 0 0 5%;
-        }
-        
-        &pc  {
-            margin-top: 2vh;
-            font-size: 0.8rem;
-            
-            @media screen and (min-width:768px) {
-                margin: 2vh 0 0 30%;
-            }
-        }
-        
-        &fly {
-            font-size: 0.8rem;
-            
-            @media screen and (min-width:768px) {
-                text-align: right;
-                margin: 0 25% 0 0;
-            }
-        }
-    }
-
-    &__link {
-        text-decoration: none;
     }
 }
