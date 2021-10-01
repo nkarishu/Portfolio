@@ -14,9 +14,8 @@ $(function () {
     });
 
     //モーダル
-    $('#container').on('click', '.container__link', function(){
+    $('#projects').on('click', '.projects__link', function(){
         const modal = $(this).attr('data-modal');
-        console.log(modal);
         
         $(modal).fadeIn(function(){
             $(this).on('click', function(){
