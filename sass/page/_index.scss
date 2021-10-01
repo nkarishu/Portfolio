@@ -148,7 +148,6 @@ body {
         flex-wrap: wrap;
     }
 
-
     &__unit {
         display: grid;
         grid-template-columns: 17% 83%;
@@ -211,7 +210,7 @@ body {
 
         &::after {
             content: "";
-            background: rgb(101, 101, 250);
+            background: rgb(149, 197, 216);
             position: relative;
             top: -10vh;
             height: 35vh;
@@ -221,7 +220,6 @@ body {
             z-index: -2;
         }
     }
-
 
     &__box {
         width: 100%;
@@ -246,6 +244,13 @@ body {
         width: 70%;
         height: 60vh;
         margin-top: -40px;
+        
+        &pc  {
+            margin: 0 0 0 auto;
+            width: 45%;
+            height: 45vh;
+            margin-top: 1vh;
+        }
     }
 
     &__img {
@@ -257,6 +262,13 @@ body {
         margin-top: -40px;
         margin-right: 250px;
         font-size: 0.8rem;
+        
+        &pc  {
+            text-align: right;
+            margin: 2vh 30% 0 0;
+            font-size: 0.8rem;
+
+        }
     }
 
     &__link {
