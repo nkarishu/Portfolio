@@ -336,28 +336,30 @@ body {
         height: 100vh;
         padding: 0 10%;
         display: none;
-        overflow-y: scroll;   
+        // overflow-y: scroll;   
     }
 
     &__container {
-        @include flex;
-        flex-direction: column;
-        width: 90%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 13vh 0;
+        
         @media screen and (min-width: 1024px) {
+            height: auto;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 80%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 10% 5% 75% 10%;
+            grid-template-rows: 5% 5% 80% 10%;
             grid-template-areas: 
             "area1 area2"
             "area3 area2"
             "area4 area2"
-            "area5 area2";
+            "area5 area5";
             grid-gap: 5%;
         }
     }
@@ -370,17 +372,19 @@ body {
             font-size: 2rem;
             text-align: center;
             grid-area: area1;
+            margin-bottom: 0;
         }
     }
     
     &__subtxt {
         margin-bottom: 3vh;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         
         @media screen and (min-width: 1024px) {
             font-size: 1rem;
             text-align: center;
             grid-area: area3;
+            margin-top: -1vh;
         }
     }
     
@@ -393,6 +397,7 @@ body {
         @media screen and (min-width: 1024px) {
             height: 45vh;
             grid-area: area2;
+            margin-bottom: 0;
         }
     }
     
@@ -408,11 +413,16 @@ body {
         @media screen and (min-width: 1024px) {
             font-size: 1rem;
             grid-area: area4;
+            margin-bottom: 0;
         }
     }
 
     &__txt {
         margin-bottom: 3vh;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
     
     &__more {
@@ -426,9 +436,10 @@ body {
     &__link {
         display: inline-block;
         text-decoration: none;
-        padding: 16px 64px;
+        padding: 16px 164px;
+        border-radius: 50px;
         color: rgb(0, 0, 0);
-        background: rgba(255, 255, 255, 0.719);
+        background: rgb(255, 255, 255);
 
         @media screen and (min-width: 1024px) {
             &:hover {
