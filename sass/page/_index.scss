@@ -341,7 +341,7 @@ body {
     &__container {
         @include flex;
         flex-direction: column;
-        width: 80%;
+        width: 90%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -349,12 +349,17 @@ body {
     }
 
     &__sub {
-        font-size: 2rem;
-        margin-bottom: 5vh;
+        font-size: 1.5rem;
+        margin-bottom: 1vh;
+    }
+
+    &__subtxt {
+        margin-bottom: 3vh;
+        font-size: 0.8rem;
     }
 
     &__pic {
-        margin-bottom: 5vh;
+        margin-bottom: 3vh;
         width: 100%;
         height: 30vh;
         overflow-y: scroll;
@@ -381,8 +386,8 @@ body {
         display: inline-block;
         text-decoration: none;
         padding: 16px 64px;
-        color: #fff;
-        background: #000;
+        color: rgb(0, 0, 0);
+        background: rgba(255, 255, 255, 0.719);
 
         @media screen and (min-width: 1024px) {
             &:hover {
