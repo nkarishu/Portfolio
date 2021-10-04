@@ -13,24 +13,31 @@ $(function () {
         $('#gnav__nav').removeClass('gnav__nav-active');
     });
 
-    //モーダル
-    $('#projects').on('click', '.projects__link', function(){
-        const modal = $(this).attr('data-modal');
-        
-        $(modal).fadeIn(function(){
-            $(this).on('click', function(){
-                $(this).fadeOut();
-            });
 
-            const link = $(this).find('a'); //子の中のa要素を探す
-            $(link).on('click', function(e){
-                e.stopPropagation(); //親元にクリックを伝えない
-                console.log(e);
-            });
+    //モーダル
+    $('#openModal').on('click', '.projects__box', function(){
+        const modal = $(this).attr('data-modal');
+        $(modal).fadeIn();
+
+        $('#closeModal').on('click', '.modal__wrap', function(){
+            $(modal).fadeOut();
+        });
+    });
+
+
+    //モーダル内ホバー
+    $(".modal__img").hover(
+        function(){
+            var imgWidth = $(this).width();
+            var imgHeight = $(this).height();
+            $(this).stop(true).animate({'top': -imgHeight+200},imgHeight*5);
+        },
+        function(){
+            var imgWidth = $(this).width();
+            var imgHeight = $(this).height();
+            $(this).stop(true).animate({'top': 0},imgHeight*2);
         });
 
-        return false;
-    });
 
     //footer背景色を変える
     const viewHeight = $(window).height();
