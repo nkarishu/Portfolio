@@ -11,15 +11,27 @@ $(function () {
     $('#gnav').on('click', function () {
         $('#gnav').removeClass('gnav-active');
         $('#gnav__nav').removeClass('gnav__nav-active');
+        $('#btn__top').removeClass('rotate-top');
+        $('#btn__middle').removeClass('hide-middle');
+        $('#btn__bottom').removeClass('rotate-bottom');
+    });
+
+    // スムーススクロール
+    $('#gnav').on('click', '.gnav__link', function () {
+        const target = $(this).attr('href');
+        const targetPos = $(target).offset().top;
+        $('html, body').animate({
+            'scrollTop': targetPos
+        }, 800);
     });
 
 
     //モーダル
-    $('#openModal').on('click', '.projects__box', function(){
+    $('#openModal').on('click', '.projects__box', function () {
         const modal = $(this).attr('data-modal');
         $(modal).fadeIn();
 
-        $('#closeModal').on('click', '.modal__wrap', function(){
+        $('#closeModal').on('click', '.modal__wrap', function () {
             $(modal).fadeOut();
         });
     });
@@ -27,15 +39,19 @@ $(function () {
 
     //モーダル内ホバー
     $(".modal__img").hover(
-        function(){
+        function () {
             var imgWidth = $(this).width();
             var imgHeight = $(this).height();
-            $(this).stop(true).animate({'top': -imgHeight+200},imgHeight*5);
+            $(this).stop(true).animate({
+                'top': -imgHeight + 200
+            }, imgHeight * 5);
         },
-        function(){
+        function () {
             var imgWidth = $(this).width();
             var imgHeight = $(this).height();
-            $(this).stop(true).animate({'top': 0},imgHeight*2);
+            $(this).stop(true).animate({
+                'top': 0
+            }, imgHeight * 2);
         });
 
 

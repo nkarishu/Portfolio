@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 5vh;
     left: 5%;
     @include flex;
@@ -20,7 +20,7 @@
     width: 45px;
     height: 45px;
     position: relative;
-    z-index: 3;
+    z-index: 4;
 
     &__top {
         @include btn(-16px);

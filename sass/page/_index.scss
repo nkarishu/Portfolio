@@ -1,8 +1,8 @@
 body {
     transition: .2s;
-    // font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
     font-family: $font-txt;
     letter-spacing: 0.1rem;
+    line-height: 1.5rem;
 }
 
 .wrapper {
@@ -336,17 +336,19 @@ body {
         height: 100vh;
         padding: 0 10%;
         display: none;
-        // overflow-y: scroll;   
     }
 
     &__container {
         height: 100vh;
         overflow-y: scroll;
         padding: 13vh 0;
+
+        @media screen and (min-width: 768px) {
+            overflow: hidden;
+        }
         
         @media screen and (min-width: 1024px) {
             height: auto;
-            overflow: hidden;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -368,8 +370,11 @@ body {
         font-size: 1.5rem;
         margin-bottom: 1vh;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 768px) {
             font-size: 2rem;
+        }
+
+        @media screen and (min-width: 1024px) {
             text-align: center;
             grid-area: area1;
             margin-bottom: 0;
@@ -379,9 +384,12 @@ body {
     &__subtxt {
         margin-bottom: 3vh;
         font-size: 0.7rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+        }
         
         @media screen and (min-width: 1024px) {
-            font-size: 1rem;
             text-align: center;
             grid-area: area3;
             margin-top: -1vh;
@@ -409,9 +417,12 @@ body {
     &__txtbox {
         margin-bottom: 5vh;
         font-size: 0.8rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1rem;
+        }
         
         @media screen and (min-width: 1024px) {
-            font-size: 1rem;
             grid-area: area4;
             margin-bottom: 0;
         }
@@ -436,7 +447,7 @@ body {
     &__link {
         display: inline-block;
         text-decoration: none;
-        padding: 16px 164px;
+        padding: 16px 124px;
         border-radius: 50px;
         color: rgb(0, 0, 0);
         background: rgb(255, 255, 255);
