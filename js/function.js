@@ -25,6 +25,18 @@ $(function () {
         }, 800);
     });
 
+    //fadein
+    $(window).scroll(function () {
+        $('.fadein').each(function () {
+            const targetElement = $(this).offset().top;
+            const scroll = $(window).scrollTop();
+            const windowHeight = $(window).height();
+            if (scroll > targetElement - windowHeight + 200) {
+                $(this).css('opacity', '1');
+                $(this).css('transform', 'translateY(0)');
+            }
+        });
+    });
 
     //モーダル
     $('#openModal').on('click', '.projects__box', function () {

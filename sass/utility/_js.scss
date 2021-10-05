@@ -19,3 +19,16 @@
     pointer-events: auto;
     transform: translateX(0);
 }
+
+.fadein {
+    opacity : 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 0;
+    transform: translateY(0);
+    animation: fadeIn 2s ease 0s;
+    animation-fill-mode: forwards;
+}
