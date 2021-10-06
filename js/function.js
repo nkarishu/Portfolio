@@ -75,7 +75,7 @@ $(function () {
         const target = $('.footer').offset().top;
 
         if (ST >= target - (viewHeight / 2)) {
-            $('body').css('background', 'rgb(159, 212, 154');
+            $('body').css('background', '#000');
         } else {
             $('body').css('background', '#fff');
         }
