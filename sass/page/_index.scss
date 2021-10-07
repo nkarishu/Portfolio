@@ -1,6 +1,6 @@
-html {
-    font-size: 90%;
-}
+// html {
+//     font-size: 90%;
+// }
 
 body {
     transition: .2s;
@@ -39,7 +39,7 @@ body {
         @media screen and (min-width: 1024px) {
             height: 75%;
             width: 85%;
-            top: 15%;
+            top: 12%;
             left: 20%;
         }
     }
@@ -57,7 +57,7 @@ body {
 
     &__ttl {
         font-family: $font-ttl;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 5rem;
         line-height: 5rem;
         margin-bottom: 16rem;
@@ -69,9 +69,9 @@ body {
         }
 
         @media screen and (min-width: 1024px) {
-            font-size: 10rem;
-            line-height: 12rem;
-            margin-bottom: 01rem;
+            font-size: 9vw;
+            line-height: 17vh;
+            margin-bottom: 5vh;
         }
     }
 
@@ -124,7 +124,7 @@ body {
         }
 
         @media screen and (min-width: 768px) {
-            font-size: 1rem;
+            font-size: 0.8vw;
         }
     }
 
@@ -179,6 +179,9 @@ body {
         }
 
         @media screen and (min-width: 1024px) {
+            grid-template-areas:
+            "area1 area2"
+            "area1 area3";
             width: 30%;
             margin-bottom: 48px;
         }
@@ -191,24 +194,21 @@ body {
 
     &__sub {
         font-size: 1.2rem;
-        font-weight: 600;
+        font-weight: 500;
         grid-area: area2;
         @include flex;
 
         @media screen and (min-width: 768px) {
-            font-size: 1.3rem;
+            font-size: 1.3vw;
         }
     }
 
     &__txt {
         grid-area: area3;
         font-size: .8rem;
-        width: 95%;
-        margin: 0 auto;
 
         @media screen and (min-width: 768px) {
-            margin-top: 20px;
-            font-size: 1rem;
+            font-size: .8vw;
         }
     }
 }
@@ -260,7 +260,7 @@ body {
 
     &__txtbox {
         text-align: right;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         margin-right: 5%;
 
         @media screen and (min-width: 768px) {
@@ -273,21 +273,16 @@ body {
     }
 
     &__sub {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 600;
-        margin-bottom: 1vh;
+        // margin-bottom: 1vh;
 
         @media screen and (min-width: 768px) {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
-    }
 
-    &__link {
-        text-decoration: none;
-        color: #000;
-
-        &:hover {
-            opacity: 0.5;
+        @media screen and (min-width: 1024px) {
+            font-size: 1.3vw;
         }
     }
 
@@ -326,7 +321,7 @@ body {
     color: #fff;
 
     &__wrap {
-        background: rgba(0, 0, 0, 0.692);
+        background: rgba(0, 0, 0, 0.9);
         height: 100vh;
         padding: 0 10%;
         display: none;
@@ -368,7 +363,6 @@ body {
 
     &__sub {
         font-size: 1.5rem;
-        margin-bottom: 1vh;
 
         @media screen and (min-width: 768px) {
             font-size: 2rem;
@@ -383,7 +377,7 @@ body {
 
     &__subtxt {
         margin-bottom: 3vh;
-        font-size: 0.7rem;
+        font-size: 1rem;
 
         @media screen and (min-width: 768px) {
             font-size: 1rem;
