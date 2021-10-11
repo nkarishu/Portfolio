@@ -30,22 +30,6 @@
         }
     }
 
-    &__box {
-        @include flex;
-    }
-
-    &__name {
-        width: 49%;
-    }
-
-    &__email {
-        width: 49%;
-    }
-
-    &__message {
-        width: 100%;
-    }
-
     &__copy {
         font-size: .6rem;
         position: absolute;
@@ -56,29 +40,48 @@
         @media screen and (min-width: 768px) {
             font-size: 0.9rem;
         }
-
     }
 }
 
 
 .form {
-    &__input {
-        background: rgb(0, 0, 0);
-        border-radius: 0;
-        line-height: 22px;
-        padding: 15px 0;
-        margin-bottom: 10px;
-        width: 100%;
-        border: 0px solid transparent;
-        border-bottom: 1px solid #fff;
+    margin-bottom: 15vh;
 
-        &::placeholder {
-            color: #fff;
-        }
+    &__wrap {
+        @include flex;
     }
 
-    &__txt {
+    &__box {
+        width: 48%;
+    }
+
+    &__label {
+        display: block;
+        padding: 0 10px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+        background: rgb(0, 0, 0);
+        border: none;
+        border-bottom: 1px solid #fff;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        color: #fff;
+        margin-bottom: 3vh;
+    }
+
+    &__textarea {
         @extend .form__input;
-        height: 100px;
+        height: 10vh;
+    }
+    
+    &__submit {
+        @extend .form__input;
+        border: none;
+        -webkit-appearance: none;
+        text-align: left;
+        font-size: 14px;
     }
 }

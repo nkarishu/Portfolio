@@ -407,12 +407,28 @@
       <div class="footer__wrap">
         <p class="footer__txten">I’m always up for adventures and international opportunities.<br>
           Feel free to say hello!</p>
-        <div class="footer__box">
-          <p class="footer__name"><input name="name" type="text" class="form__input" placeholder="name" /></p>
-          <p class="footer__email"><input name="email" type="text" class="form__input" placeholder="email" /></p>
-        </div>
-        <p class="footer__message"><textarea name="text" class="form__txt" placeholder="details"></textarea></p>
-      </div>
+          <form id="form" class="form" action="データ送信先" method="POST">
+            <div class="form__wrap">
+              <div class="form__box">
+                <label class="form__label" for="name">Name</label>
+                <input id="name" class="form__input" type="text" name="name" required>
+              </div>
+    
+              <div class="form__box">
+                <label class="form__label" for="email">Email</label>
+                <input id="email" class="form__input" type="email" name="email" required>
+              </div>
+            </div>
+    
+            <div class="form__bigbox">
+              <label class="form__label" for="message">Description</label>
+              <textarea name="message" id="message" class="form__textarea" required></textarea>
+            </div>
+    
+            <div class="form__bigbox">
+              <input type="submit" class="form__submit" value="Submit →">
+            </div>
+          </form>
       <p class="footer__copy"><small class="footer__small">&copy;2021 Natsumi Karishu</small></p>
     </div>
 
