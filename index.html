@@ -7,7 +7,7 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <link href="css/style.css" rel="stylesheet" media="all">
+  <link href="css/style.css?" rel="stylesheet" media="all">
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
@@ -417,34 +417,43 @@
         <p class="footer__txt">閲覧いただき誠にありがとうございます。<br>
           ご連絡があれば、下記よりお気軽にお問い合わせください。</p>
 
-        <form id="form" class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_wWeWLMdSjQSkpkfKyoQ8Gu-3y5YTOXVXHpIpOCViig7xyQ/formResponse" method="POST">
-        <div class="form__wrap">
-          <div class="form__box">
-            <label class="form__label" for="name">お名前</label>
-            <input id="name" class="form__input" type="text" name="entry.1904627824" required>
+        <form id="form" class="form"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_wWeWLMdSjQSkpkfKyoQ8Gu-3y5YTOXVXHpIpOCViig7xyQ/formResponse"
+          method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+          <div class="form__wrap">
+            <div class="form__box">
+              <label class="form__label" for="name">お名前</label>
+              <input id="name" class="form__input" type="text" name="entry.1904627824" required>
+            </div>
+
+            <div class="form__box">
+              <label class="form__label" for="email">メール</label>
+              <input id="email" class="form__input" type="email" name="entry.1617217893" required>
+            </div>
           </div>
 
-          <div class="form__box">
-            <label class="form__label" for="email">メール</label>
-            <input id="email" class="form__input" type="email" name="entry.1617217893" required>
+          <div class="form__bigbox">
+            <label class="form__label" for="message">内容</label>
+            <textarea name="entry.882460807" id="message" class="form__textarea" required></textarea>
           </div>
-        </div>
 
-        <div class="form__bigbox">
-          <label class="form__label" for="message">内容</label>
-          <textarea name="entry.882460807" id="message" class="form__textarea" required></textarea>
-        </div>
+          <div class="form__bigbox">
+            <input type="submit" class="form__submit" value="送信 →" target="_blank">
+          </div>
+        </form>
 
-        <div class="form__bigbox">
-          <input type="submit" class="form__submit" value="送信 →">
-        </div>
-      </form>
+        <iframe name="dummyIframe" style="display:none;"></iframe>
 
         <p class="footer__copy"><small class="footer__small">&copy;2021 Natsumi Karishu</small></p>
       </div>
 
     </div>
 
+    <script>
+      var submitted = false;
+    </script>
+    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
+      onload="if(submitted)  {window.location='thanks.html';}"></iframe>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/function.js"></script>
