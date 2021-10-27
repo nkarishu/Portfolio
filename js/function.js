@@ -48,7 +48,6 @@ $(function () {
         });
     });
 
-
     //モーダル内ホバー
     $(".modal__img").hover(
         function () {
@@ -65,7 +64,6 @@ $(function () {
                 'top': 0
             }, imgHeight * 2);
         });
-
 
     //footer背景色を変える
     const viewHeight = $(window).height();

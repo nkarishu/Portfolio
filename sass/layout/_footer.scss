@@ -39,10 +39,10 @@
 
         @media screen and (min-width: 768px) {
             font-size: 0.9rem;
+            bottom: -6vh;
         }
     }
 }
-
 
 .form {
     margin-bottom: 15vh;
@@ -55,14 +55,9 @@
         width: 48%;
     }
 
-    &__label {
-        display: block;
-        padding: 0 10px;
-    }
-
     &__input {
         width: 100%;
-        padding: 10px;
+        padding: 10px 0;
         background: rgb(0, 0, 0);
         border: none;
         border-bottom: 1px solid #fff;
@@ -70,11 +65,21 @@
         letter-spacing: 0.1em;
         color: #fff;
         margin-bottom: 3vh;
+
+        &::placeholder {
+            font-size: 14px;
+            font-family: $font-txt;
+        }
     }
 
     &__textarea {
         @extend .form__input;
         height: 10vh;
+
+        &::placeholder {
+            font-size: 14px;
+            font-family: $font-txt;
+        }
     }
     
     &__submit {

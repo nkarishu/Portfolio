@@ -6,7 +6,7 @@
   <title>狩集夏実 Portforlio Website</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width,initial-scale=0.9">
   <link href="css/style.css?" rel="stylesheet" media="all">
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -227,7 +227,7 @@
                 最終的にWordPressの自作テーマとして公開しました。<br>
                 サーバーはAWSを使用しています。</p>
             </div>
-            <p class="modal__more"><a href="https://nkarishu.github.io/Yuragi/" class="modal__link">Visit</a></p>
+            <p class="modal__more"><a href="https://nkarishu.github.io/Yuragi/" class="modal__link" target="_blank">Visit</a></p>
           </div>
         </div>
 
@@ -253,7 +253,7 @@
                 WordPressのテーマ「Sydney」を使用して制作しています。
               </p>
             </div>
-            <p class="modal__more"><a href="https://kamahale-village.main.jp/" class="modal__link">Visit</a></p>
+            <p class="modal__more"><a href="https://kamahale-village.main.jp/" class="modal__link" target="_blank">Visit</a></p>
           </div>
         </div>
 
@@ -280,7 +280,7 @@
                 Gitで管理・Githubサーバーにアップロードしています。
               </p>
             </div>
-            <p class="modal__more"><a href="https://nkarishu.github.io/SUNDAY_COVE/" class="modal__link">Visit</a></p>
+            <p class="modal__more"><a href="https://nkarishu.github.io/SUNDAY_COVE/" class="modal__link" target="_blank">Visit</a></p>
           </div>
         </div>
 
@@ -306,7 +306,7 @@
                 AWSサーバーを使用しています。
               </p>
             </div>
-            <p class="modal__more"><a href="#" class="modal__link">Visit</a></p>
+            <p class="modal__more"><a href="#" class="modal__link" target="_blank">Visit</a></p>
           </div>
         </div>
 
@@ -332,7 +332,7 @@
                 Gitで管理・Githubサーバーにアップロードしています。
               </p>
             </div>
-            <p class="modal__more"><a href="https://nkarishu.github.io/GO-Thailand/" class="modal__link">Visit</a></p>
+            <p class="modal__more"><a href="https://nkarishu.github.io/GO-Thailand/" class="modal__link" target="_blank">Visit</a></p>
           </div>
         </div>
 
@@ -358,7 +358,7 @@
                 今回はWordPressの有料テーマ「Prolingua」を使用して制作しています。
               </p>
             </div>
-            <p class="modal__more"><a href="http://nkarishu.xsrv.jp/" class="modal__link">Visit</a></p>
+            <p class="modal__more"><a href="http://nkarishu.xsrv.jp/" class="modal__link" target="_blank">Visit</a></p>
           </div>
         </div>
 
@@ -384,7 +384,7 @@
                 Gitで管理・Githubサーバーにアップロードしています。
               </p>
             </div>
-            <p class="modal__more"><a href="https://nkarishu.github.io/WSS/" class="modal__link">Visit</a></p>
+            <p class="modal__more"><a href="https://nkarishu.github.io/WSS/" class="modal__link" target="_blank">Visit</a></p>
           </div>
         </div>
 
@@ -422,19 +422,19 @@
           method="POST" target="hidden_iframe" onsubmit="submitted=true;">
           <div class="form__wrap">
             <div class="form__box">
-              <label class="form__label" for="name">お名前</label>
-              <input id="name" class="form__input" type="text" name="entry.1904627824" required>
+              <!-- <label class="form__label" for="name">お名前</label> -->
+              <input id="name" class="form__input" type="text" name="entry.1904627824" placeholder="お名前" required>
             </div>
 
             <div class="form__box">
-              <label class="form__label" for="email">メール</label>
-              <input id="email" class="form__input" type="email" name="entry.1617217893" required>
+              <!-- <label class="form__label" for="email">メール</label> -->
+              <input id="email" class="form__input" type="email" name="entry.1617217893" placeholder="メールアドレス" required>
             </div>
           </div>
 
           <div class="form__bigbox">
-            <label class="form__label" for="message">内容</label>
-            <textarea name="entry.882460807" id="message" class="form__textarea" required></textarea>
+            <!-- <label class="form__label" for="message">内容</label> -->
+            <textarea name="entry.882460807" id="message" class="form__textarea"  placeholder="お問い合わせ内容"required></textarea>
           </div>
 
           <div class="form__bigbox">
@@ -449,11 +449,6 @@
 
     </div>
 
-    <script>
-      var submitted = false;
-    </script>
-    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
-      onload="if(submitted)  {window.location='thanks.html';}"></iframe>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/function.js"></script>
