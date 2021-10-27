@@ -42,9 +42,13 @@ $(function () {
     $('#openModal').on('click', '.projects__box', function () {
         const modal = $(this).attr('data-modal');
         $(modal).fadeIn();
-
+        scrollPosition = $(window).scrollTop();
+		$('body').addClass('fixed').css({'top': -scrollPosition});
+        
         $('#closeModal').on('click', '.modal__wrap', function () {
             $(modal).fadeOut();
+            $('body').removeClass('fixed').css({'top': 0});
+            window.scrollTo( 0 , scrollPosition );
         });
     });
 

@@ -1,5 +1,5 @@
 body {
-    transition: .2s;
+    // transition: .2s;
     font-family: $font-txt;
     font-weight: 500;
     letter-spacing: 0.1rem;
@@ -113,7 +113,6 @@ body {
     &__txt {
         margin-bottom: 20px;
         font-size: 0.8rem;
-        line-height: 1.3rem;
 
         &:last-of-type {
             margin-bottom: 0;
@@ -448,7 +447,23 @@ body {
         
         @media screen and (min-width: 1024px) {
             width: 90%;
-            height: 37vh;
+            height: 40vh;
+            grid-area: area2;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    &__picfly {
+        width: 100%;
+        height: 35vh;
+        margin: 0 auto 3vh 0;
+        
+        @media screen and (min-width: 768px) {
+            height: 45vh;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 90%;
+            height: 50vh;
             grid-area: area2;
             margin: 0 0 0 auto;
         }
