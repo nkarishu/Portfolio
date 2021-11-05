@@ -46,9 +46,12 @@ $(function () {
 		$('body').addClass('fixed').css({'top': -scrollPosition});
         
         $('#closeModal').on('click', '.modal__wrap', function () {
-            $(modal).fadeOut();
-            $('body').removeClass('fixed').css({'top': 0});
-            window.scrollTo( 0 , scrollPosition );
+            $(modal).fadeOut(function(){
+                setTimeout(function(){
+                    $('body').removeClass('fixed').css({'top': 0});
+                    window.scrollTo( 0 , scrollPosition );
+                },300);
+            });
         });
     });
 
