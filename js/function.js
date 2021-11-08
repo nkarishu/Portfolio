@@ -39,18 +39,29 @@ $(function () {
     });
 
     //モーダル
+    const disableScroll = (e) => {
+        e.preventDefault();
+    }
     $('#openModal').on('click', '.projects__box', function () {
         const modal = $(this).attr('data-modal');
+        document.addEventListener('touchmove', disableScroll, {
+            passive: false
+        });
+
+        document.addEventListener('mousewheel', disableScroll, {
+            passive: false
+        });
         $(modal).fadeIn();
         scrollPosition = $(window).scrollTop();
-		$('body').addClass('fixed').css({'top': -scrollPosition});
-        
+
         $('#closeModal').on('click', '.modal__wrap', function () {
-            $(modal).fadeOut(function(){
-                setTimeout(function(){
-                    $('body').removeClass('fixed').css({'top': 0});
-                    window.scrollTo( 0 , scrollPosition );
-                },300);
+            $(modal).fadeOut(function () {
+                document.removeEventListener('touchmove', disableScroll, {
+                    passive: false
+                });
+                document.removeEventListener('mousewheel', disableScroll, {
+                    passive: false
+                });
             });
         });
     });
