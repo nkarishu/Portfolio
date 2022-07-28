@@ -92,10 +92,10 @@ $(function () {
 
         if (ST >= target - (viewHeight / 2)) {
             $('body').css('background', '#000');
-            $('body').css('transition', '0.3s');
+            $('body').css('transition', '0.2s');
         } else {
             $('body').css('background', '#fff');
-            $('body').css('transition', '0.3s');
+            $('body').css('transition', '0.2s');
         }
     });
 });
