@@ -1,5 +1,4 @@
 body {
-    // transition: .2s;
     font-family: $font-txt;
     font-weight: 500;
     letter-spacing: 0.1rem;
@@ -133,7 +132,7 @@ body {
 
         @media screen and (min-width: 1024px) {
             grid-area: area2;
-            height: 20%;
+            // height: 60%;
             margin-bottom: 0;
         }
     }
