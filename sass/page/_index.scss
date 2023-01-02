@@ -178,8 +178,8 @@ body {
 
         @media screen and (min-width: 1024px) {
             grid-template-areas:
-            "area1 area2"
-            "area1 area3";
+                "area1 area2"
+                "area1 area3";
             width: 30%;
             margin-bottom: 48px;
         }
@@ -190,7 +190,8 @@ body {
         @include flex;
 
         @media screen and (min-width: 768px) {
-            margin-bottom: 2vh;;
+            margin-bottom: 2vh;
+            ;
         }
     }
 
@@ -228,38 +229,38 @@ body {
 
 .projects {
     margin-bottom: 70vh;
-    
-    &::before {
-        content: "";
-        background: rgb(149, 197, 216);
-        position: relative;
-        top: 8vh;
-        width: 90%;
-        height: 15vh;
-        display: block;
-        margin-left: 10%;
-        position: sticky;
-        z-index: -1;
 
-        @media screen and (min-width:768px) {
-            height: 20vh;
-        }
+    // &::before {
+    //     content: "";
+    //     background: rgb(149, 197, 216);
+    //     position: relative;
+    //     top: 8vh;
+    //     width: 90%;
+    //     height: 15vh;
+    //     display: block;
+    //     margin-left: 10%;
+    //     position: sticky;
+    //     z-index: -1;
+    // }
 
-        @media screen and (min-width:1024px) {
-            height: 35vh;
-        }
-    }
+    // @media screen and (min-width:768px) {
+    //     height: 20vh;
+    // }
+
+    // @media screen and (min-width:1024px) {
+    //     height: 35vh;
+    // }
 
     &__ttl {
         position: relative;
         top: -9vh;
         @include ttl;
         height: 2vh;
-        
+
         @media screen and (min-width:768px) {
             top: -12vh;
         }
-        
+
         @media screen and (min-width: 1024px) {
             top: -20vh;
         }
@@ -267,11 +268,11 @@ body {
 
     &__wrap {
         margin-top: -6vh;
-        
+
         @media screen and (min-width: 768px) {
             margin-top: -10vh;
         }
-        
+
         @media screen and (min-width: 1024px) {
             margin-top: -20vh;
         }
@@ -304,7 +305,7 @@ body {
     &__sub {
         font-size: 1rem;
         font-weight: 600;
-        
+
         @media screen and (min-width: 768px) {
             margin-bottom: 0.5vh;
             font-size: 1.4rem;
@@ -319,7 +320,7 @@ body {
         width: 90%;
         margin: 2vh 0 0 auto;
 
-                
+
         @media screen and (min-width: 768px) {
             width: 80%;
         }
@@ -375,10 +376,10 @@ body {
             scrollbar-width: none;
 
             &::-webkit-scrollbar {
-                display:none;
+                display: none;
             }
         }
-        
+
         @media screen and (min-width: 1024px) {
             overflow: hidden;
             height: auto;
@@ -438,12 +439,12 @@ body {
         width: 100%;
         height: 25vh;
         margin: 0 auto 3vh 0;
-        overflow-y: scroll; 
-        
+        overflow-y: scroll;
+
         @media screen and (min-width: 768px) {
             height: 31vh;
         }
-        
+
         @media screen and (min-width: 1024px) {
             width: 90%;
             height: 40vh;
@@ -456,10 +457,11 @@ body {
         width: 100%;
         height: 35vh;
         margin: 0 auto 3vh 0;
-        
+
         @media screen and (min-width: 768px) {
             height: 45vh;
         }
+
         @media screen and (min-width: 1024px) {
             width: 90%;
             height: 50vh;
