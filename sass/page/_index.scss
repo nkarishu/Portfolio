@@ -298,10 +298,10 @@ body {
     &__wrap {
         position: relative;
         margin-bottom: 30vh;
-        width: 85%;
+        // width: 85%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(230px, 300px));
         line-height: 0;
     }
 
