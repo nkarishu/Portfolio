@@ -21,7 +21,7 @@ body {
     width: 100%;
     margin-bottom: 200px;
     position: relative;
-
+    
     &__pic {
         width: 100%;
         height: 43%;
@@ -30,7 +30,8 @@ body {
         top: 40%;
         left: 0;
         position: absolute;
-
+        animation: fadeInMV 3s ease 1s 1 normal backwards;
+        
         @media screen and (min-width: 1024px) {
             height: 75%;
             width: 85%;
@@ -38,43 +39,95 @@ body {
             left: 20%;
         }
     }
-
+    
+    @keyframes fadeInMV {
+        from {
+            opacity: 0;
+        }
+        
+        to {
+            opacity: 1;
+        }
+    }
+    
     &__wrap {
         position: absolute;
         top: 15%;
         left: 0;
-
+        
         @media screen and (min-width: 1024px) {
             top: 15%;
             left: 5%;
         }
     }
-
-    &__ttl {
+    
+    &__ttl1 {
         font-family: $font-ttl;
         font-weight: 600;
         font-size: 5rem;
         line-height: 5rem;
-        margin-bottom: 16rem;
-
+        animation: fadeInTTL1 1s ease 1s 1 normal backwards;
+        
         @media screen and (min-width:768px) {
             font-size: 8rem;
             line-height: 8rem;
-            margin-bottom: 23rem;
         }
-
+        
         @media screen and (min-width: 1024px) {
             font-size: 9vw;
             line-height: 17vh;
+        }
+    }
+    
+    &__ttl2 {
+        @extend .mv__ttl1;
+        animation: fadeInTTL 3s ease 1s 1 normal backwards;
+    }
+    
+    &__ttl3 {
+        @extend .mv__ttl1;
+        margin-bottom: 16rem;
+        animation: fadeInTTL 5s ease 1s 1 normal backwards;
+        
+        @media screen and (min-width:768px) {
+            margin-bottom: 23rem;
+        }
+        
+        @media screen and (min-width: 1024px) {
             margin-bottom: 5vh;
         }
     }
+    
+    @keyframes fadeInTTL1 {
+        from {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
 
+    @keyframes fadeInTTL {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    
     &__txt {
         font-size: 1.2rem;
         font-family: 'Montserrat', sans-serif;
         font-weight: normal;
-
+        animation: fadeInTXT 5s ease 1s 1 normal backwards;
+        
         @media screen and (min-width:768px) {
             font-size: 1.8rem;
         }
@@ -84,6 +137,17 @@ body {
         }
     }
 
+    @keyframes fadeInTXT {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
 }
 
 .main {
@@ -132,7 +196,6 @@ body {
 
         @media screen and (min-width: 1024px) {
             grid-area: area2;
-            // height: 60%;
             margin-bottom: 0;
         }
     }
@@ -228,129 +291,179 @@ body {
 }
 
 .projects {
-    margin-bottom: 70vh;
-
-    // &::before {
-    //     content: "";
-    //     background: rgb(149, 197, 216);
-    //     position: relative;
-    //     top: 8vh;
-    //     width: 90%;
-    //     height: 15vh;
-    //     display: block;
-    //     margin-left: 10%;
-    //     position: sticky;
-    //     z-index: -1;
-    // }
-
-    // @media screen and (min-width:768px) {
-    //     height: 20vh;
-    // }
-
-    // @media screen and (min-width:1024px) {
-    //     height: 35vh;
-    // }
-
-    &__ttl {
-        position: relative;
-        top: -9vh;
-        @include ttl;
-        height: 2vh;
-
-        @media screen and (min-width:768px) {
-            top: -12vh;
-        }
-
-        @media screen and (min-width: 1024px) {
-            top: -20vh;
-        }
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__wrap {
-        margin-top: -6vh;
-
-        @media screen and (min-width: 768px) {
-            margin-top: -10vh;
-        }
-
-        @media screen and (min-width: 1024px) {
-            margin-top: -20vh;
-        }
+        position: relative;
+        margin-bottom: 30vh;
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        line-height: 0;
     }
 
     &__box {
-        width: 100%;
-        margin-bottom: 10vh;
+        position: relative;
 
-        @media screen and (min-width: 1024px) {
-            margin-bottom: 15vh;
-        }
-    }
-
-    &__txtbox {
-        text-align: right;
-        font-size: 0.7rem;
-        margin-right: 5%;
-
-        @media screen and (min-width: 768px) {
-            font-size: 1rem;
+        &:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
         }
 
-        @media screen and (min-width: 1024px) {
-            font-size: 0.9vw;
-            margin: 0 2% 3vh 0;
-        }
-    }
-
-    &__sub {
-        font-size: 1rem;
-        font-weight: 600;
-
-        @media screen and (min-width: 768px) {
-            margin-bottom: 0.5vh;
-            font-size: 1.4rem;
-        }
-
-        @media screen and (min-width: 1024px) {
-            font-size: 1.3vw;
-        }
-    }
-
-    &__pic {
-        width: 90%;
-        margin: 2vh 0 0 auto;
-
-
-        @media screen and (min-width: 768px) {
-            width: 80%;
-        }
-
-        @media screen and (min-width: 1024px) {
-            width: 50vw;
-        }
-
-        &fly {
-            width: 261px;
-            height: 183.9px;
-            margin: 2vh 0 0 auto;
-
-            @media screen and (min-width:768px) {
-                width: 435px;
-                height: 306.5px;
-                margin-right: 3%;
-            }
-
-            @media screen and (min-width: 1024px) {
-                width: 522px;
-                height: 368px;
-            }
+        &:nth-child(8) {
+            grid-column: span 2;
+            grid-row: span 1;
         }
     }
 
     &__img {
         @include img;
+        opacity: 0.3;
+        transition: 0.5s;
+
+        &:hover {
+            opacity: 1;
+            transition: 0.5s;
+        }
+    }
+
+    &__txt {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-family: $font-ttl;
+        font-size: 18px;
+        line-height: 1;
+        color: #fff;
     }
 }
+
+
+
+// &::before {
+//     content: "";
+//     background: rgb(149, 197, 216);
+//     position: relative;
+//     top: 8vh;
+//     width: 90%;
+//     height: 15vh;
+//     display: block;
+//     margin-left: 10%;
+//     position: sticky;
+//     z-index: -1;
+// }
+
+// @media screen and (min-width:768px) {
+//     height: 20vh;
+// }
+
+// @media screen and (min-width:1024px) {
+//     height: 35vh;
+// }
+// }
+
+// &__ttl {
+//     position: sticky;
+//     @include ttl;
+//     height: 2vh;
+
+//     @media screen and (min-width:768px) {
+//         top: -12vh;
+//     }
+
+//     @media screen and (min-width: 1024px) {
+//         top: 5vh;
+//         // top: -20vh;
+//     }
+// }
+
+// &__wrap {
+//     margin-top: -6vh;
+
+//     @media screen and (min-width: 768px) {
+//         margin-top: -10vh;
+//     }
+
+//     @media screen and (min-width: 1024px) {
+//         margin-top: -20vh;
+//     }
+// }
+
+// &__box {
+//     width: 100%;
+//     margin-bottom: 10vh;
+
+//     @media screen and (min-width: 1024px) {
+//         margin-bottom: 15vh;
+//     }
+// }
+
+// &__pic {
+//     width: 90%;
+//     height: 40vh;
+//     margin: -3vh 0 0 50px;
+
+//     @media screen and (min-width: 768px) {
+//         width: 80%;
+//     }
+
+//     @media screen and (min-width: 1024px) {
+//         width: 40%;
+//     }
+
+//     &fly {
+//         width: 261px;
+//         height: 183.9px;
+//         margin: 2vh 0 0 auto;
+
+//         @media screen and (min-width:768px) {
+//             width: 435px;
+//             height: 306.5px;
+//             margin-right: 3%;
+//         }
+
+//         @media screen and (min-width: 1024px) {
+//             width: 522px;
+//             height: 368px;
+//         }
+//     }
+// }
+
+// &__img {
+//     @include img;
+//     transition: 0.5s;
+//     opacity: 0.2;
+
+//     :hover {
+//         opacity: 0.8;
+//         transition: 0.5s;
+//     }
+
+// &__txtbox {
+//     position: relative;
+
+// }
+
+// &__sub {
+//     font-family: $font-ttl;
+//     font-size: 5rem;
+//     font-weight: 600;
+//     position: absolute;
+//     top: -37vh;
+
+//     @media screen and (min-width: 768px) {
+//         margin-bottom: 0.5vh;
+//         font-size: 1.4rem;
+//     }
+
+//     @media screen and (min-width: 1024px) {
+//         font-size: 4vw;
+//         line-height: 1;
+//     }
+// }
 
 .modal {
     position: fixed;

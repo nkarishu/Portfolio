@@ -37,6 +37,13 @@ $(function () {
             }
         });
     });
+    
+    // $(window).onload(function () {
+    //     $('.fadein_side1').each(function () {
+    //         $(this).css('opacity', '1');
+    //         $(this).css('transform', 'translateX(0)');
+    //     });
+    // });
 
     //モーダル
     const disableScroll = (e) => {
@@ -83,23 +90,8 @@ $(function () {
             }, imgHeight * 2);
         });
 
-    //worksの背景色を変える
-    $(window).on('scroll', function () {
-        const viewHeight = $(window).height();
-        const STp = $(window).scrollTop();
-        const target = $('.projects').offset().top;
-        
-        if (STp >= target - (viewHeight / 2)) {
-            $('body').css('background', '#FDF9F0');
-            $('body').css('transition', '0.4s');
-        } else {
-            $('body').css('background', '#fff');
-            $('body').css('transition', '0.4s');
-        }
-    });
-    
     //footer背景色を変える
-    
+
     $(window).on('scroll', function () {
         const viewHeight = $(window).height();
         const ST = $(window).scrollTop();
@@ -108,6 +100,9 @@ $(function () {
         if (ST >= target - (viewHeight / 2)) {
             $('body').css('background', '#000');
             $('body').css('transition', '0.2s');
-        } 
+        } else {
+            $('body').css('background', '#fff');
+            $('body').css('transition', '0.2s');
+        }
     });
 });
