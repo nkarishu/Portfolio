@@ -37,20 +37,15 @@ $(function () {
             }
         });
     });
-    
-    // $(window).onload(function () {
-    //     $('.fadein_side1').each(function () {
-    //         $(this).css('opacity', '1');
-    //         $(this).css('transform', 'translateX(0)');
-    //     });
-    // });
 
     //モーダル
     const disableScroll = (e) => {
         e.preventDefault();
     }
+
     $('#openModal').on('click', '.projects__box', function () {
         const modal = $(this).attr('data-modal');
+
         document.addEventListener('touchmove', disableScroll, {
             passive: false
         });
@@ -58,6 +53,7 @@ $(function () {
         document.addEventListener('mousewheel', disableScroll, {
             passive: false
         });
+        
         $(modal).fadeIn();
         scrollPosition = $(window).scrollTop();
 
@@ -73,25 +69,7 @@ $(function () {
         });
     });
 
-    //モーダル内ホバー
-    $(".modal__img").hover(
-        function () {
-            var imgWidth = $(this).width();
-            var imgHeight = $(this).height();
-            $(this).stop(true).animate({
-                'top': -imgHeight + 200
-            }, imgHeight * 5);
-        },
-        function () {
-            var imgWidth = $(this).width();
-            var imgHeight = $(this).height();
-            $(this).stop(true).animate({
-                'top': 0
-            }, imgHeight * 2);
-        });
-
     //footer背景色を変える
-
     $(window).on('scroll', function () {
         const viewHeight = $(window).height();
         const ST = $(window).scrollTop();
